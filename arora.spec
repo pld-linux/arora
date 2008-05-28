@@ -8,7 +8,8 @@ Group:		X11/Applications/Networking
 Source0:	%{name}-20080528.tar.bz2
 # Source0-md5:	a5f1c6df366748bf8e6f556e12f220d1
 URL:		http://code.google.com/p/arora/
-BuildRequires:	qt4-qmake > 4.4
+BuildRequires:	QtWebKit-devel
+BuildRequires:	qt4-qmake >= 4.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,7 +26,8 @@ mean and loads of fun to hack on.
 %setup -q -n %{name}
 
 %build
-%configure
+# XXX: how to pass PREFIX?
+qmake-qt4
 %{__make}
 
 %install
