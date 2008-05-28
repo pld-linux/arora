@@ -43,6 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/arora
 %{_desktopdir}/arora.desktop
 %dir %{_datadir}/arora
+%dir %{_datadir}/arora/locale
 %lang(cs_CZ) %{_datadir}/arora/locale/cs_CZ.qm
 %lang(de) %{_datadir}/arora/locale/de.qm
 %lang(en) %{_datadir}/arora/locale/en.qm
