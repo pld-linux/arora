@@ -2,7 +2,7 @@
 Summary:	A simple cross platform web browser
 Name:		arora
 Version:	0.2
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	%{name}-20080528.tar.bz2
@@ -26,8 +26,7 @@ mean and loads of fun to hack on.
 %setup -q -n %{name}
 
 %build
-export QTDIR=/usr
-qmake-qt4
+qmake-qt4 PREFIX=%{_prefix}
 %{__make}
 
 %install
@@ -41,3 +40,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog
+%attr(755,root,root) %{_bindir}/arora
+%{_desktopdir}/arora.desktop
+%dir %{_datadir}/arora
+%lang(cs_CZ) %{_datadir}/arora/locale/cs_CZ.qm
+%lang(de) %{_datadir}/arora/locale/de.qm
+%lang(en) %{_datadir}/arora/locale/en.qm
+%lang(es) %{_datadir}/arora/locale/es.qm
+%lang(fr) %{_datadir}/arora/locale/fr.qm
+%lang(pl) %{_datadir}/arora/locale/pl.qm
+%lang(ru) %{_datadir}/arora/locale/ru.qm
