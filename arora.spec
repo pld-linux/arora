@@ -33,7 +33,7 @@ qmake-qt4 PREFIX=%{_prefix}
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} -j1 install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT
 
 %clean
