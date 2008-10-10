@@ -1,12 +1,12 @@
 %define		snap	20080528
 Summary:	A simple cross platform web browser
 Name:		arora
-Version:	0.3
+Version:	0.4
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://arora.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	6da3c659f99775cee38b38b1ca85e173
+# Source0-md5:	702d29d021f7ac2c4e3ace3252876071
 URL:		http://code.google.com/p/arora/
 BuildRequires:	QtWebKit-devel
 BuildRequires:	qt4-linguist
@@ -64,5 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pt_BR) %{_datadir}/arora/locale/pt_BR.qm
 %lang(tr) %{_datadir}/arora/locale/tr.qm
 %lang(ru) %{_datadir}/arora/locale/ru.qm
-%lang(zh_CN) %{_datadir}/arora/locale/zh_CN.qm
+#%lang(zh_CN) %{_datadir}/arora/locale/zh_CN.qm
 %{_mandir}/man1/*.1*
