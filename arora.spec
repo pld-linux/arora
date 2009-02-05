@@ -9,6 +9,7 @@ Source0:	http://arora.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	702d29d021f7ac2c4e3ace3252876071
 URL:		http://code.google.com/p/arora/
 BuildRequires:	QtWebKit-devel
+BuildRequires:	qt4-build
 BuildRequires:	qt4-linguist
 BuildRequires:	qt4-qmake >= 4.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
