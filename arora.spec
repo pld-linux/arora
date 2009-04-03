@@ -1,13 +1,14 @@
 %define		snap	20080528
 Summary:	A simple cross platform web browser
 Name:		arora
-Version:	0.5
-Release:	2
+Version:	0.6
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://arora.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	339e35f46e50e38a49bdf8bbba7dd405
+# Source0-md5:	8af32512bbbea4a2f2514b30cbf3d50a
 URL:		http://code.google.com/p/arora/
+BuildRequires:	QtSql-devel
 BuildRequires:	QtWebKit-devel
 BuildRequires:	qt4-build
 BuildRequires:	qt4-linguist
@@ -43,7 +44,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog
-%attr(755,root,root) %{_bindir}/arora
+%attr(755,root,root) %{_bindir}/arora*
+%attr(755,root,root) %{_bindir}/googlesuggest
+%attr(755,root,root) %{_bindir}/htmlToXBel
 %{_pixmapsdir}/*.*
 %{_iconsdir}/*/*/*/*.png
 %{_iconsdir}/*/*/*/*.svg
@@ -53,10 +56,12 @@ rm -rf $RPM_BUILD_ROOT
 %lang(cs_CZ) %{_datadir}/arora/locale/cs_CZ.qm
 %lang(da) %{_datadir}/arora/locale/da_DK.qm
 %lang(de) %{_datadir}/arora/locale/de_DE.qm
-%lang(en_US) %{_datadir}/arora/locale/en_US.qm
+#%lang(en_US) %{_datadir}/arora/locale/en_US.qm
+%lang(el_GR) %{_datadir}/arora/locale/el_GR.qm
 %lang(es) %{_datadir}/arora/locale/es.qm
 %lang(es_CR) %{_datadir}/arora/locale/es_CR.qm
 %lang(et) %{_datadir}/arora/locale/et_EE.qm
+%lang(fi_FI) %{_datadir}/arora/locale/fi_FI.qm
 %lang(fr_CA) %{_datadir}/arora/locale/fr_CA.qm
 %lang(fr_FR) %{_datadir}/arora/locale/fr_FR.qm
 %lang(gl) %{_datadir}/arora/locale/gl.qm
