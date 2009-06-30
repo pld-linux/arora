@@ -1,4 +1,3 @@
-%define		snap	20080528
 Summary:	A simple cross platform web browser
 Name:		arora
 Version:	0.7.1
