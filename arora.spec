@@ -12,6 +12,7 @@ BuildRequires:	QtWebKit-devel
 BuildRequires:	qt4-build
 BuildRequires:	qt4-linguist
 BuildRequires:	qt4-qmake >= 4.5
+Suggests:	xine-output-video-xcb
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
