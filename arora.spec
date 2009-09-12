@@ -1,11 +1,11 @@
 Summary:	A simple cross platform web browser
 Name:		arora
-Version:	0.8.0
+Version:	0.9.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://arora.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	f8c9a12cadbed8c85e8396db2ee62b8c
+# Source0-md5:	6473ddb24d65d468265c94710409937b
 URL:		http://code.google.com/p/arora/
 BuildRequires:	QtSql-devel
 BuildRequires:	QtWebKit-devel
@@ -51,6 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/arora.desktop
 %dir %{_datadir}/arora
 %dir %{_datadir}/arora/locale
+%lang(ca) %{_datadir}/arora/locale/ca.qm
 %lang(cs_CZ) %{_datadir}/arora/locale/cs_CZ.qm
 %lang(da) %{_datadir}/arora/locale/da_DK.qm
 %lang(de) %{_datadir}/arora/locale/de_DE.qm
@@ -78,4 +79,5 @@ rm -rf $RPM_BUILD_ROOT
 %lang(tr) %{_datadir}/arora/locale/tr_TR.qm
 %lang(uk) %{_datadir}/arora/locale/uk.qm
 %lang(zh_CN) %{_datadir}/arora/locale/zh_CN.qm
+%lang(zh_TW) %{_datadir}/arora/locale/zh_TW.qm
 %{_mandir}/man1/*.1*
