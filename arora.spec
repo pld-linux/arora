@@ -9,6 +9,7 @@ Source0:	http://arora.googlecode.com/files/%{name}-%{version}.tar.gz
 URL:		http://code.google.com/p/arora/
 BuildRequires:	QtSql-devel
 BuildRequires:	QtWebKit-devel
+BuildRequires:	pkgconfig
 BuildRequires:	qt4-build
 BuildRequires:	qt4-linguist
 BuildRequires:	qt4-qmake >= 4.5
