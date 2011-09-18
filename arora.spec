@@ -1,7 +1,7 @@
 Summary:	A simple cross platform web browser
 Name:		arora
 Version:	0.11.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://arora.googlecode.com/files/%{name}-%{version}.tar.gz
@@ -13,6 +13,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	qt4-build
 BuildRequires:	qt4-linguist
 BuildRequires:	qt4-qmake >= 4.5
+Requires:	desktop-file-utils
 Suggests:	xine-output-video-xcb
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,12 +36,14 @@ qmake-qt4 PREFIX=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} -j1 install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+%update_desktop_database
 
 %files
 %defattr(644,root,root,755)
